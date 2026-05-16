@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 function Navbar({ adminName = "Super Admin" }) {
   return (
     <nav
-      className={`${styles.nav} d-flex justify-content-between align-items-center shadow-sm`}
+      className={`${styles.nav} d-flex justify-content-between align-items-center shadow-sm min-vw-100`}
     >
       <div
         className={`${styles.parentImg} d-flex justify-content-between align-items-center`}

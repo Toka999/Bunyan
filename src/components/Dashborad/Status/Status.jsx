@@ -1,13 +1,29 @@
+import CardStatus from "../../Ui/CardStatus/CardStatus"
+import  styles  from "../../Ui/CardStatus/CardStatus.module.css";
+
 function Status(){
+
+    const cardsDetails=[
+        {counter:120, title:"Projects",icon:<i class={`${styles.IconStyle} fa-solid fa-building`}></i>},
+        {counter:150, title:"Users",icon:<i class={`${styles.IconStyle} fa-solid fa-users`}></i>},
+        {counter:200, title:"Developers",icon:<i class={`${styles.IconStyle} fa-solid fa-hammer`}></i>},
+        {counter:50, title:"Blogs",icon:<i class={`${styles.IconStyle} fa-solid fa-newspaper`}></i>}
+
+    ];
     return (
-        <section className="">
-            <div className="container min-vw-100">
-                <div className="row">
+        <section className="w-100 h-100">
+            <div className="container ">
+                <div className="row mt-1 mb-1 ">
                     {/*default:12    medium and above: 3 columns*/ }
-                    <div className="col-12 col-md-3">Test 1</div>
-                    <div className="col-12 col-md-3">Test 2</div>
-                    <div className="col-12 col-md-3">Test 3</div>
-                    <div className="col-12 col-md-3">Test 4</div>
+                    {cardsDetails.map((element, index)=>{
+                        return (
+                        <div className="col-12 col-md-3 mt-4 ">
+                            <CardStatus title={element.title} counter={element.counter} icon={element.icon}></CardStatus>
+                        </div>
+
+                        );
+                    })
+                    }
                 </div>
             </div>
         </section>
