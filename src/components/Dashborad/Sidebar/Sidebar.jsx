@@ -6,9 +6,9 @@ function Sidebar (){
         {icon:"fa-chart-bar", title:"Status", path:"/"},
         {icon:"fa-users", title:"Users Mangement", path:"/users"},
         {icon:"fa-building", title:"Project Mangement", path:"/projects"},
-        {icon:"fa-building", title:"Developer Mangement", path:""}, 
-        {icon:"fa-chart-bar", title:"cms", path:""},
-        {icon:"fa-message", title:"Live chat", path:""}
+        {icon:"fa-building", title:"Developer Mangement", path:"/developers"}, 
+        {icon:"fa-chart-bar", title:"cms", path:"/cms"},
+        {icon:"fa-message", title:"Live chat", path:"/chat"}
     ];
     return (
         <aside className={`${styles.sidebar} min-vh-100 py-4 `}>

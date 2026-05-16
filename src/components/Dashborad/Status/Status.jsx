@@ -18,7 +18,7 @@ function Status(){
                     {cardsDetails.map((element, index)=>{
                         return (
                         <div className="col-12 col-md-3 mt-4 ">
-                            <CardStatus title={element.title} counter={element.counter} icon={element.icon}></CardStatus>
+                            <CardStatus key={index} title={element.title} counter={element.counter} icon={element.icon}></CardStatus>
                         </div>
 
                         );
@@ -29,4 +29,4 @@ function Status(){
         </section>
     )
 }
-export default Status
+export default Status;

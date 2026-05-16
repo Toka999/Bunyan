@@ -1,6 +1,7 @@
+import { Outlet } from "react-router-dom";
 function Projects(){
     return(
-        <div>projectsssss</div>
+        <Outlet></Outlet>
     );
 }
 

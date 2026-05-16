@@ -1,4 +1,4 @@
-import Status from "../components/Dashborad/Status/Status";
+import Status from "../components/Dashborad/Status/Status.jsx";
 
 function StatusPage(){
     return(
