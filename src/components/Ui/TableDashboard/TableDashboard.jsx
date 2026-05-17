@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 const TableDashboard=({name})=>{
     return(
         <div className="container m-auto w-100">
@@ -36,6 +37,8 @@ const TableDashboard=({name})=>{
                     </tr>
                 </tbody>
         </table>
+        <Outlet></Outlet>
+
 
         </div>
 

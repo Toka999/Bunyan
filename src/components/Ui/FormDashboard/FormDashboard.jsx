@@ -1,10 +1,21 @@
+import { useOutletContext } from "react-router-dom";
+
 const FormDashboard=()=>{
+    const [setInputChange]=useOutletContext();
+    const pending =(e)=>{
+        const value=e.target.value;
+        if(value.length>0){
+            setInputChange(true);
+        }else{
+            setInputChange(false);
+        }
+    }
  return(
     <div className="container">
         <form>
             <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label">Email address</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                <input type="email" onChange={pending} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div className="mb-3">

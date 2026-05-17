@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Sidebar.module.css"
 
-function Sidebar (){
+
+
+function Sidebar ({inputChange}){
     const links=[
         {icon:"fa-chart-bar", title:"Status", path:"/"},
         {icon:"fa-users", title:"Users Mangement", path:"/users"},
@@ -24,8 +26,17 @@ function Sidebar (){
                          ps-4 d-flex align-items-center gap-3 py-4`}>
                             <i className={`fa-solid  ${item.icon} fs-5`}></i>
                             <span>{item.title}</span>
+                         {inputChange===true?(
+                            <span>
+                                Pending...
+                            </span>
+
+                ): <span></span>}
                         </NavLink>
                 ))}
+                
+               
+                
                 </div>
             </nav>
         </aside>

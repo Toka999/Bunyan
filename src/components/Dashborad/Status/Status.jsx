@@ -4,10 +4,10 @@ import  styles  from "../../Ui/CardStatus/CardStatus.module.css";
 function Status(){
 
     const cardsDetails=[
-        {counter:120, title:"Projects",icon:<i class={`${styles.IconStyle} fa-solid fa-building`}></i>},
-        {counter:150, title:"Users",icon:<i class={`${styles.IconStyle} fa-solid fa-users`}></i>},
-        {counter:200, title:"Developers",icon:<i class={`${styles.IconStyle} fa-solid fa-hammer`}></i>},
-        {counter:50, title:"Blogs",icon:<i class={`${styles.IconStyle} fa-solid fa-newspaper`}></i>}
+        {counter:120, title:"Projects",icon:<i className={`${styles.IconStyle} fa-solid fa-building`}></i>},
+        {counter:150, title:"Users",icon:<i className={`${styles.IconStyle} fa-solid fa-users`}></i>},
+        {counter:200, title:"Developers",icon:<i className={`${styles.IconStyle} fa-solid fa-hammer`}></i>},
+        {counter:50, title:"Blogs",icon:<i className={`${styles.IconStyle} fa-solid fa-newspaper`}></i>}
 
     ];
     return (
