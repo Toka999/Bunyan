@@ -2,6 +2,8 @@ import { useOutletContext } from "react-router-dom";
 
 const FormDashboard=()=>{
     const [setInputChange]=useOutletContext();
+    
+   
     const pending =(e)=>{
         const value=e.target.value;
         if(value.length>0){

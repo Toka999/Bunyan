@@ -4,6 +4,7 @@ import styles from "./Sidebar.module.css"
 
 
 function Sidebar ({inputChange}){
+
     const links=[
         {icon:"fa-chart-bar", title:"Status", path:"/"},
         {icon:"fa-users", title:"Users Mangement", path:"/users"},
@@ -24,14 +25,23 @@ function Sidebar ({inputChange}){
                          key={index} 
                          className={`${styles.navItem} 
                          ps-4 d-flex align-items-center gap-3 py-4`}>
-                            <i className={`fa-solid  ${item.icon} fs-5`}></i>
-                            <span>{item.title}</span>
-                         {inputChange===true?(
-                            <span>
-                                Pending...
-                            </span>
+                            {
+                                ({isActive})=>(
+                                    <>
+                                        <i className={`fa-solid  ${item.icon} fs-5`}></i>
+                                        <span>{item.title}</span>
+                                        {(inputChange===true && isActive) ?(
+                                            <span>
+                                                Pending...
+                                            </span>
 
-                ): <span></span>}
+                                            ): <span></span>
+                                        }
+                                    </>
+                                )
+                            }
+                            
+                         
                         </NavLink>
                 ))}
                 

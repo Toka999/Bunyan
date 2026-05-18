@@ -1,10 +1,15 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet ,useOutletContext } from 'react-router-dom'
 
 const DeveloperPage = () => {
+      const inputChange = useOutletContext();
+
   return (
     <>
-    <Outlet></Outlet>
+    <section className="py-4 w-100">
+           <Outlet context={inputChange}/>
+        
+        </section>
     </>
     
   )

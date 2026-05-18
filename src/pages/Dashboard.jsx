@@ -6,15 +6,16 @@ import { useState } from "react";
 
 function Dashboard() {
   const [inputChange, setInputChange]=useState(false);
+  
 
   return (
     <>
       <Navbar adminName="mohamed" />
       <div className="d-flex ">
-        <Sidebar inputChange={inputChange}>
+        <Sidebar inputChange={inputChange} >
           
         </Sidebar>
-        <Outlet context={[setInputChange]}/>
+        <Outlet context={[setInputChange]}   />
       </div>
       <Footer />
     </>
