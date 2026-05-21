@@ -1,0 +1,21 @@
+.CardBgColor{
+    background-color: var(--hover-color);
+    height: 160px;
+    max-width: 280px;
+
+}
+
+.IconStyle{
+    color:var(--main-color);
+    font-size: 2rem;
+}
+
+.info{
+    color:var(--main-color);
+}
+
+.counter,
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+}
